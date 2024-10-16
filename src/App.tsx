@@ -64,7 +64,8 @@ export default function Portfolio() {
 
   return (
     <div className={`min-h-screen ${darkMode ? "dark" : ""}`}>
-      <div className="bg-background text-foreground transition-colors duration-300">
+      <div className="bg-background text-foreground transition-colors duration-300 relative overflow-hidden">
+        <Meteors number={30} />
         <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -143,7 +144,6 @@ export default function Portfolio() {
 
         <main className="container max-w-screen-2xl mx-auto py-6 space-y-8">
           <div className="relative overflow-hidden">
-            <Meteors number={20} />
             <section className="text-center space-y-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

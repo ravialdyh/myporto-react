@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       animation: {
-        "meteor-effect": "meteor 5s linear infinite",
+        "meteor-effect": "meteor 10s linear infinite",
       },
       keyframes: {
         meteor: {
