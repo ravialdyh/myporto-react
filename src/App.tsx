@@ -18,6 +18,7 @@ import { Meteors } from "./components/ui/meteors";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Navigation } from './components/Navigation';
 import BlogPage from "./pages/BlogPage";
+import ProjectsPage from "./pages/ProjectsPage";
 
 const technologies = [
   { name: "React", icon: "⚛️" },
@@ -182,6 +183,7 @@ export default function Portfolio() {
               }
             />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
             {/* Add more routes as needed */}
           </Routes>
           <footer className="border-t">
