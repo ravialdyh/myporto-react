@@ -16,7 +16,7 @@ import {
 import { motion } from "framer-motion";
 import { Meteors } from "./components/ui/meteors";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Navigation } from './components/Navigation';
+import { Navigation } from "./components/Navigation";
 import BlogPage from "./pages/BlogPage";
 import ProjectsPage from "./pages/ProjectsPage";
 
@@ -71,8 +71,8 @@ export default function Portfolio() {
       <div className={`min-h-screen ${darkMode ? "dark" : ""}`}>
         <div className="bg-background text-foreground transition-colors duration-300 relative overflow-hidden">
           <Meteors number={30} />
-          <Navigation 
-            darkMode={darkMode} 
+          <Navigation
+            darkMode={darkMode}
             setDarkMode={setDarkMode}
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
@@ -103,8 +103,8 @@ export default function Portfolio() {
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
-                        <div className="flex flex-col space-y-1.5 p-6">
-                          <h3 className="text-lg font-semibold">
+                        <div className="flex flex-col space-y-2 p-6">
+                          <h3 className="text-2xl font-semibold leading-none tracking-tight">
                             My Magical Toolbox 🧰✨
                           </h3>
                           <p className="text-sm text-muted-foreground">
@@ -127,8 +127,8 @@ export default function Portfolio() {
                       </div>
 
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
-                        <div className="flex flex-col space-y-1.5 p-6">
-                          <h3 className="text-lg font-semibold">
+                        <div className="flex flex-col space-y-2 p-6">
+                          <h3 className="text-2xl font-semibold leading-none tracking-tight">
                             My Cartoon Career 📚🎬
                           </h3>
                           <p className="text-sm text-muted-foreground">
