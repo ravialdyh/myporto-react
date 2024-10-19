@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
-import { Meteors } from "@/components/ui/meteors";
-import { Mail, Github, Linkedin, Moon, Sun, Search } from "lucide-react";
 import { motion } from "framer-motion";
-
-const blogPosts = [
+import { Meteors } from "@/components/ui/meteors";
+export const blogPosts = [
   {
-    title: "The Magic of React Hooks",
-    slug: "magic-of-react-hooks",
-    date: "June 15, 2023",
+    title: "Random Variables? + Many Interactive Visualizations",
+    slug: "random-variables",
+    date: "October 19, 2024",
     excerpt:
-      "Discover how React Hooks can simplify your code and make your components more magical! ✨🪄",
+      "Discover how fun it is to learn random variables with interactive visualizations! ✨🪄",
+    component: lazy(() => import("../blogposts/blogpost1")),
   },
   {
     title: "Animating with CSS: A Cartoon Guide",
@@ -45,7 +44,7 @@ export default function BlogPage() {
       <Meteors number={30} />
       <main className="container max-w-screen-2xl mx-auto py-6 space-y-8">
         <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl text-center">
-          Blog
+          Blog 🧙‍♂️📜
         </h1>
         <div className="grid gap-6">
           {blogPosts.map((post, index) => (

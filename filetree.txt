@@ -1,0 +1,238 @@
+.
+|____.cache
+| |____replit
+| |____typescript
+| |____nix
+|____public
+| |____favicon.svg
+|____src
+| |____App.css
+| |____index.css
+| |____index.tsx
+| |____components
+| |____lib
+| |____pages
+| |____App.tsx
+|____.config
+| |____npm
+| |____configstore
+|____.upm
+| |____store.json
+|____node_modules
+| |____@babel
+| |____@jridgewell
+| |____@types
+| |____ansi-styles
+| |____acorn
+| |____buffer-from
+| |____color-name
+| |____chalk
+| |____color-convert
+| |____debug
+| |____convert-source-map
+| |____csstype
+| |____escape-string-regexp
+| |____gensync
+| |____globals
+| |____has-flag
+| |____@vitejs
+| |____js-tokens
+| |____loose-envify
+| |____ms
+| |____magic-string
+| |____path-parse
+| |____react
+| |____react-refresh
+| |____safe-buffer
+| |____scheduler
+| |____source-map
+| |____react-dom
+| |____sourcemap-codec
+| |____source-map-support
+| |____supports-preserve-symlinks-flag
+| |____supports-color
+| |____to-fast-properties
+| |____typescript
+| |____terser
+| |____@ampproject
+| |____.bin
+| |____.package-lock.json
+| |____.vite
+| |____lucide-react
+| |____tslib
+| |____esbuild
+| |____esbuild-linux-64
+| |____jsesc
+| |____json5
+| |____nanoid
+| |____picocolors
+| |____rollup
+| |____semver
+| |____postcss
+| |____source-map-js
+| |____vite
+| |____@esbuild
+| |____caniuse-lite
+| |____escalade
+| |____function-bind
+| |____is-core-module
+| |____node-releases
+| |____resolve
+| |____update-browserslist-db
+| |____electron-to-chromium
+| |____autoprefixer
+| |____lodash.castarray
+| |____lodash.isplainobject
+| |____lodash.merge
+| |____postcss-selector-parser
+| |____fraction.js
+| |____normalize-range
+| |____postcss-value-parser
+| |____cssesc
+| |____util-deprecate
+| |____arg
+| |____didyoumean
+| |____dlv
+| |____is-glob
+| |____glob-parent
+| |____jiti
+| |____lilconfig
+| |____micromatch
+| |____normalize-path
+| |____object-hash
+| |____postcss-import
+| |____postcss-js
+| |____sucrase
+| |____braces
+| |____anymatch
+| |____is-binary-path
+| |____readdirp
+| |____picomatch
+| |____fill-range
+| |____merge2
+| |____fastq
+| |____run-parallel
+| |____reusify
+| |____to-regex-range
+| |____is-extglob
+| |____binary-extensions
+| |____read-cache
+| |____camelcase-css
+| |____yaml
+| |____pify
+| |____hasown
+| |____queue-microtask
+| |____commander
+| |____lines-and-columns
+| |____glob
+| |____mz
+| |____pirates
+| |____ts-interface-checker
+| |____foreground-child
+| |____jackspeak
+| |____minimatch
+| |____minipass
+| |____package-json-from-dist
+| |____path-scurry
+| |____cross-spawn
+| |____signal-exit
+| |____path-key
+| |____shebang-command
+| |____which
+| |____string-width
+| |____strip-ansi
+| |____brace-expansion
+| |____balanced-match
+| |____any-promise
+| |____object-assign
+| |____thenify-all
+| |____lru-cache
+| |____shebang-regex
+| |____eastasianwidth
+| |____emoji-regex
+| |____is-fullwidth-code-point
+| |____ansi-regex
+| |____thenify
+| |____is-number
+| |____isexe
+| |____browserslist
+| |____@nodelib
+| |____@tailwindcss
+| |____@alloc
+| |____@isaacs
+| |____string-width-cjs
+| |____@pkgjs
+| |____wrap-ansi-cjs
+| |____tailwindcss
+| |____chokidar
+| |____fast-glob
+| |____postcss-load-config
+| |____postcss-nested
+| |____strip-ansi-cjs
+| |____wrap-ansi
+| |____clsx
+| |____tailwind-merge
+| |____@radix-ui
+| |____class-variance-authority
+| |____recharts
+| |____eventemitter3
+| |____lodash
+| |____react-is
+| |____react-smooth
+| |____recharts-scale
+| |____tiny-invariant
+| |____victory-vendor
+| |____fast-equals
+| |____react-transition-group
+| |____dom-helpers
+| |____regenerator-runtime
+| |____decimal.js-light
+| |____d3-array
+| |____d3-ease
+| |____d3-interpolate
+| |____d3-scale
+| |____d3-shape
+| |____d3-time
+| |____d3-timer
+| |____internmap
+| |____d3-format
+| |____d3-color
+| |____d3-time-format
+| |____d3-path
+| |____prop-types
+| |____framer-motion
+| |____react-router-dom
+| |____react-router
+| |____@remix-run
+|____tsconfig.node.json
+|____package-lock.json
+|____.gitignore
+|____README.md
+|____.replit
+|____index.html
+|____dist
+| |____favicon.svg
+| |____assets
+| |____index.html
+|____postcss.config.js
+|____vite.config.js
+|____tsconfig.json
+|____.git
+| |____branches
+| |____info
+| |____hooks
+| |____description
+| |____refs
+| |____objects
+| |____COMMIT_EDITMSG
+| |____logs
+| |____HEAD
+| |____FETCH_HEAD
+| |____ORIG_HEAD
+| |____index
+| |____config
+|____LICENSE
+|____tailwind.config.js
+|____package.json
+|____filetree.txt
+|____generate_tree.sh

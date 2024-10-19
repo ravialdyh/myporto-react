@@ -52,6 +52,7 @@ const data = [
   { name: "Jun", total: 214 },
 ];
 
+const BlogPost = lazy(() => import("./components/BlogPost"));
 const LazyChart = lazy(() => import("./components/LazyChart"));
 
 export default function Portfolio() {
@@ -183,6 +184,14 @@ export default function Portfolio() {
               }
             />
             <Route path="/blog" element={<BlogPage />} />
+            <Route
+              path="/blog/:slug"
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <BlogPost />
+                </Suspense>
+              }
+            />
             <Route path="/projects" element={<ProjectsPage />} />
             {/* Add more routes as needed */}
           </Routes>
