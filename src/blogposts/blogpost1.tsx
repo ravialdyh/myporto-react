@@ -2,6 +2,7 @@ import React from "react";
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import DiceRollExperiment from "./rv-interactives/DiceRollExperiment";
 
 const config = {
   loader: { load: ["[tex]/ams"] },
@@ -22,9 +23,6 @@ const BlogPost1 = () => {
         <CardContent className="p-4 sm:p-6 md:p-8 lg:p-10">
           <div className="space-y-8">
             <header>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                Random Variables: A Comprehensive Guide
-              </h1>
               <p className="text-base sm:text-lg text-muted-foreground">
                 Explore the fundamental concepts of probability theory and
                 statistics through an in-depth look at random variables.
@@ -53,8 +51,7 @@ const BlogPost1 = () => {
                   <MathJax inline className="mx-1">
                     {"$\\Omega$"}
                   </MathJax>
-                </span>
-                {""}
+                </span>{" "}
                 represents the sample space, which is the set of all possible
                 outcomes of an experiment or random process.
               </p>
@@ -64,30 +61,32 @@ const BlogPost1 = () => {
 
             <section className="space-y-4">
               <h2 className="text-xl sm:text-2xl font-semibold">
-                Example: Coin Flipping Experiment
+                Example: Dice Rolling Experiment
               </h2>
               <p className="text-sm sm:text-base">
                 To illustrate this concept, let's consider a simple experiment
-                of flipping a coin twice. Our sample space would be:
+                of rolling a fair six-sided die. Our sample space would be:
+              </p>
+              <Card className="bg-muted p-4">
+                <MathJax>
+                  {"$$\\Omega_{\\text{die roll}} = \\{1, 2, 3, 4, 5, 6\\}$$"}
+                </MathJax>
+              </Card>
+              <p className="text-sm sm:text-base">
+                Now, let's define a random variable X that represents the
+                outcome of the die roll:
               </p>
               <Card className="bg-muted p-4">
                 <MathJax>
                   {
-                    "$$\\Omega_{\\mathrm{double\\ flip}} = \\{(H,H), (H,T), (T,H), (T,T)\\}$$"
+                    "$$X(\\omega) = \\omega, \\quad \\text{for } \\omega \\in \\Omega_{\\text{die roll}}$$"
                   }
                 </MathJax>
               </Card>
               <p className="text-sm sm:text-base">
-                Now, let's define a random variable X that counts the number of
-                heads:
+                This is an example of an identity function, where the random
+                variable X assigns to each outcome its face value.
               </p>
-              <Card className="bg-muted p-4">
-                <MathJax>
-                  {
-                    "$$X(\\omega) = \\begin{cases} 2 & \\text{if } \\omega = (H,H) \\\\ 1 & \\text{if } \\omega = (H,T) \\text{ or } (T,H) \\\\ 0 & \\text{if } \\omega = (T,T) \\end{cases}$$"
-                  }
-                </MathJax>
-              </Card>
             </section>
 
             <Separator />
@@ -103,8 +102,8 @@ const BlogPost1 = () => {
               <ul className="list-disc list-inside space-y-2 pl-4 text-sm sm:text-base">
                 <li>
                   <strong>Discrete Random Variables</strong>: These take on
-                  countable values. Our coin-flipping example is a discrete
-                  random variable.
+                  countable values. Our die rolling example is a discrete random
+                  variable.
                 </li>
                 <li>
                   <strong>Continuous Random Variables</strong>: These can take
@@ -122,15 +121,19 @@ const BlogPost1 = () => {
               </h2>
               <p className="text-sm sm:text-base">
                 Each random variable has an associated probability distribution.
-                For our coin-flipping example:
+                For our fair die rolling example:
               </p>
               <Card className="bg-muted p-4">
                 <MathJax>
                   {
-                    "$$P(X = k) = \\begin{cases} \\frac{1}{4} & \\text{if } k = 0 \\\\ \\frac{1}{2} & \\text{if } k = 1 \\\\ \\frac{1}{4} & \\text{if } k = 2 \\\\ 0 & \\text{otherwise} \\end{cases}$$"
+                    "$$P(X = k) = \\frac{1}{6}, \\quad \\text{for } k \\in \\{1, 2, 3, 4, 5, 6\\}$$"
                   }
                 </MathJax>
               </Card>
+              <p className="text-sm sm:text-base">
+                This uniform distribution reflects the equal probability of
+                rolling any number on a fair die.
+              </p>
             </section>
 
             <Separator />
@@ -154,7 +157,7 @@ const BlogPost1 = () => {
                 <Card className="bg-muted p-4">
                   <MathJax>
                     {
-                      "$$E[X] = 0 \\cdot \\frac{1}{4} + 1 \\cdot \\frac{1}{2} + 2 \\cdot \\frac{1}{4} = 1$$"
+                      "$$E[X] = 1 \\cdot \\frac{1}{6} + 2 \\cdot \\frac{1}{6} + 3 \\cdot \\frac{1}{6} + 4 \\cdot \\frac{1}{6} + 5 \\cdot \\frac{1}{6} + 6 \\cdot \\frac{1}{6} = 3.5$$"
                     }
                   </MathJax>
                 </Card>
@@ -169,11 +172,27 @@ const BlogPost1 = () => {
                 <Card className="bg-muted p-4">
                   <MathJax>
                     {
-                      "$$Var(X) = E[X^2] - (E[X])^2 = (0^2 \\cdot \\frac{1}{4} + 1^2 \\cdot \\frac{1}{2} + 2^2 \\cdot \\frac{1}{4}) - 1^2 = \\frac{1}{2}$$"
+                      "$$Var(X) = E[X^2] - (E[X])^2 = \\frac{91}{6} - (\\frac{7}{2})^2 = \\frac{35}{12} \\approx 2.92$$"
                     }
                   </MathJax>
                 </Card>
               </ul>
+            </section>
+
+            <Separator />
+
+            <section className="space-y-4">
+              <h2 className="text-xl sm:text-2xl font-semibold">
+                Interactive Dice Roll Experiment
+              </h2>
+              <p className="text-sm sm:text-base">
+                Explore the concept of random variables with this interactive
+                dice roll experiment. You can change the function that maps the
+                dice roll outcomes to different values, demonstrating how
+                various random variables can be defined on the same sample
+                space.
+              </p>
+              <DiceRollExperiment />
             </section>
 
             <Separator />
@@ -185,7 +204,10 @@ const BlogPost1 = () => {
                 in data science, statistics, or any field that deals with
                 uncertainty. While the concept may seem abstract at first, it
                 provides a powerful tool for modeling and analyzing real-world
-                phenomena.
+                phenomena. The interactive dice roll experiment above
+                demonstrates how we can define different random variables on the
+                same sample space, allowing us to model various aspects of an
+                experiment or process.
               </p>
             </section>
           </div>
